@@ -10,5 +10,4 @@ def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """Retrieves the first element of the sequence if it exists"""
     if lst:
         return [0]
-    else:
-        return None
+    return None
