@@ -12,11 +12,13 @@ because of concurrency.
 import asyncio
 import random
 from typing import List
+
+
 wait_random = __import__('0-basic_async_syntax').wait_random
 
 
 async def wait_n(n: int, max_delay: int) -> list[float]:
-    """Execute wait_random n number of time until max_delay, return list of delays"""
-    tasks = tuple(map(lambda x: wait_random(max_delay), range(n)))
+    """Execute wait_random n number of times until max_delay"""
+    tasks = [wait_random(max_delay) for _ in range(n)]
     delays = await asyncio.gather(*tasks)
     return sorted(delays)
