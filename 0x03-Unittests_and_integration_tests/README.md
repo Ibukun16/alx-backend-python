@@ -1,0 +1,1 @@
+This project directory contains practice tasks on the understanding and the use of unittest, unit and integrations, testing patterns, mocking, parametrization and fixtures. These knoweldge are very essential in the use of python programming language
